@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace PatronIterator
 {
-    class Program
+    abstract class AbstractNodo
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Iterator");
-        }
+        int dato;
     }
 }

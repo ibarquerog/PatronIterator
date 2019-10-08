@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace PatronIterator
 {
-    class Program
+    interface IIterator<T>
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Iterator");
-        }
+        Boolean hasNext();
+        T next();
     }
 }
