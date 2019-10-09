@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractNodo.cs" />
+    <Compile Include="IContainer.cs" />
     <Compile Include="IIterator.cs" />
     <Compile Include="NodoAuxiliar.cs" />
     <Compile Include="NodoPrincipal.cs" />

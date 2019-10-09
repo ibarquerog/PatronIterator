@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace PatronIterator
 {
-    abstract class AbstractNodo
+    interface IContainer<T>
     {
-        public int dato;
-
-        public abstract String toString();
+        IIterator<T> createIterator();
     }
 }

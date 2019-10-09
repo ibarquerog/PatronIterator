@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PatronIterator
 {
-    class NodoAuxiliar:AbstractNodo
+    class NodoAuxiliar : AbstractNodo
     {
         private NodoPrincipal izquierdo;
         private NodoPrincipal derecho;
@@ -14,17 +15,30 @@ namespace PatronIterator
         internal NodoPrincipal NodoIzquierdo { get => izquierdo; set => izquierdo = value; }
         internal NodoPrincipal NodoDerecho { get => derecho; set => derecho = value; }
 
-        private class IteratorNodoAuxiliar : IIterator<NodoAuxiliar>
+        public NodoAuxiliar(int dato)
         {
-            public bool hasNext()
-            {
-                throw new NotImplementedException();
-            }
+            this.dato = dato;
+        }
 
-            public NodoAuxiliar next()
+        public void agregarNodoIzquierdo(NodoPrincipal nodo)
+        {
+            if (izquierdo == null)
             {
-                throw new NotImplementedException();
+                izquierdo = nodo;
             }
+        }
+
+        public void agregarNodoDerecho(NodoPrincipal nodo)
+        {
+            if (derecho == null)
+            {
+                derecho = nodo;
+            }
+        }
+
+        public override string toString()
+        {
+            return "NodoAuxiliar(" + "Dato=" + dato + ")";
         }
     }
 }
