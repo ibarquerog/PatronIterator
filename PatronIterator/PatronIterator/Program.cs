@@ -58,8 +58,9 @@ namespace PatronIterator
             while (nodeIterator.hasNext())
             {
                 AbstractNodo nodo = nodeIterator.next();
-                Debug.WriteLine(nodo.toString());
+                Console.WriteLine(nodo.toString());
             }
+            Console.ReadLine();
         }
     }
 }
